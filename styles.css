@@ -1,98 +1,116 @@
-html{
-    scroll-behavior: smooth;
-}
-.contenedor-header{
-    background: #1e2326;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-    z-index: 99;
-}
-.contenedor-header header{
-    max-width: 1100px;
-    margin: auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 20px;
-}
-.contenedor-header header .logo a{
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 36px;
-    color: #1CB698;
-    text-decoration: none;
-}
-.contenedor-header header ul{
-    display: flex;
-    list-style: none;
-}
-.contenedor-header header nav ul li a{
-    text-align: none;
-    color: #fff;
-    margin: 0 15px;
-    padding: 3px;
-    transition: .5s;
-    text-decoration: none;
-}
-.contenedor-header header nav ul li a:hover{
-    color: #1CB698;
-}
-.nav-responsive{
-    background-color: #1CB698;
-    color: #fff;
-    padding: 5px 10px;
-    border: 5px;
-    cursor: pointer;
-    display: none;
-}
-.inicio{
-    background: linear-gradient(to top,rgba(30,35,38,.8) rgba(30,35,38,1)),
-    url(img/seba.jpg);
-    background-size: cover;
-    height: 100vh;
-    color: #fff;
-    display: flex;
-    align-items: center;
-}
-.inicio .contenido-banner{
-    padding: 20px;
-    background-color: #1e2326;
-    max-width: 350px;
-    margin: auto;
-    text-align: center;
-    border-radius: 40px;
-}
-.inicio .contenido-banner img{
-    margin-top: 40px;
-    border: 10px solid #1CB698;
-    display: block;
-    width: 80%;
-    margin: auto;
-}
-.inicio .contenido-banner h1{
-    margin-top: 40px;
-    font-size: 42px;
-    font-family: Arial, Helvetica, sans-serif;
-}
-.inicio .contenido-banner h2{
-    font-size: 15px;
-    font-weight: normal;
-}
-.inicio .contenido-banner .redes a{
-    color: #fff;
-    display: inline-block;
-    text-decoration: none;
-    border: 1px solid #fff;
-    border-radius: 100%;
-    width: 42px;
-    height: 42px;
-    line-height: 42px;
-    margin: 40px 5px;
-    font-size: 20px;
-    transition: .3s;
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.inicio .contenido-banner .redes a:hover{
-    background-color: #1CB698;
+body{
+    font-family: Poppins;
+    background-color: #e5e7eb;
 }
+/*Header*/
+header{
+    display: flex;
+    flex-direction: column;
+}
+header nav{
+    background-color: #cab2cd;
+    height: auto;
+    width: auto;
+    border-radius:50px;
+    align-self: center;
+    margin: 10px 0px;
+}
+.header-nav ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    list-style: none;
+}
+.header-nav ul li{
+    margin: 10px 8px;
+}
+.header-nav a{
+    text-decoration: none;
+    font-size: 18px;
+    text-transform: capitalize;
+    color: black;
+    transition: all 0.4s ease;
+}
+.header-nav a:hover{
+    color: white;
+}
+.header-hero{
+    display: flex;
+    justify-content: center;
+}
+.header-hero div{
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    width: 80%;
+    background-color: #8c61b8;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+}
+.header-presentacion{
+    font-size: 28px;
+}
+
+.header-hero a i{
+    color: white;
+    font-size: 26px;
+    text-align: center;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50%;
+    background-color: #8c61b8;
+    transition: all 0.5s ease;
+}
+.header-hero i:hover{
+    color: #8c61b8;
+    background-color: white;
+}
+/*Main*/
+main{
+    display: flex;
+    flex-direction: column;
+
+}
+main h2{
+    text-align: center;
+    color: white;
+}
+main .main-proyectos{
+    width: 80%;
+    align-self: center;
+    background-color: #8c61b8;
+}
+main .main-proyectos .proyectos{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    background-color: #8c61b8;
+    padding-right: 20px;
+}
+main .main-proyectos .proyectos .proyectos-proyecto{
+    padding: 12px;
+    justify-content: end;
+}
+main .main-proyectos .proyectos .proyectos-proyecto h4{
+    color: #fff;
+    font-size: 18px;
+}
+main .main-proyectos .proyectos .proyectos-proyecto p{
+    width: 80%;
+}
+main .main-tecnologias{
+    background-color: #8c61b8;
+    width: 80%;
+    align-self: center;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+/*Footer*/
