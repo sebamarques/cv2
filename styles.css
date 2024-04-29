@@ -10,6 +10,9 @@ body{
     font-family: Poppins;
     background-color: #e5e7eb;
 }
+ul{
+    list-style: none;
+}
 /*Header*/
 header{
     display: flex;
@@ -27,7 +30,6 @@ header nav{
     display: flex;
     flex-direction: row;
     justify-content: center;
-    list-style: none;
 }
 .header-nav ul li{
     margin: 10px 8px;
@@ -78,11 +80,13 @@ header nav{
 main{
     display: flex;
     flex-direction: column;
-
 }
 main h2{
-    text-align: center;
+    text-align: start;
     color: white;
+    padding-left: 30px;
+    margin-bottom: 30px;
+    border-bottom: #fff solid 3px;
 }
 main .main-proyectos{
     width: 80%;
@@ -93,11 +97,14 @@ main .main-proyectos .proyectos{
     display: grid;
     grid-template-columns: repeat(2,1fr);
     background-color: #8c61b8;
-    padding-right: 20px;
 }
 main .main-proyectos .proyectos .proyectos-proyecto{
     padding: 12px;
     justify-content: end;
+    border: solid #cab2cd 3px;
+    border-radius: 10px;
+    width: 90%;
+    margin: 20px 0px;
 }
 main .main-proyectos .proyectos .proyectos-proyecto h4{
     color: #fff;
@@ -107,10 +114,51 @@ main .main-proyectos .proyectos .proyectos-proyecto p{
     width: 80%;
 }
 main .main-tecnologias{
+    display: grid;
     background-color: #8c61b8;
     width: 80%;
     align-self: center;
+}
+
+main .main-tecnologias .tecnologias{
+    width: 40%;
+    border: #cab2cd solid 3px;
+    border-radius: 5px;
+    margin-left: 28%;
+    padding-left: 14%;
+}
+main .main-tecnologias ul {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    justify-content: space-between;
+    color: white;
+}
+main .main-tecnologias ul li i{
+    font-size: 30px;
+}
+
+/*Footer*/
+footer{
+    display: flex;
+    flex-direction: column;
+}
+footer .sobre-mi{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    align-self: center;
+    background-color: #8c61b8;
     border-bottom-left-radius: 50px;
     border-bottom-right-radius: 50px;
+    margin-bottom: 50px;
 }
-/*Footer*/
+footer .sobre-mi h3{
+    margin-bottom: 30px;
+    padding-left: 30px;
+    color: white;
+    font-size: 22px;
+}
+footer .sobre-mi p{
+    width: 60%;
+}
