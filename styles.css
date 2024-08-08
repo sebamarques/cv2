@@ -1,165 +1,184 @@
+/*Body*/
 *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 body{
-    font-family: Poppins;
-    background-color: #e5e7eb;
-}
-ul{
-    list-style: none;
+    background-color: rgb(15 23 42);
+    color: white;
+    font-family: 'Poppins';
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 h2{
-    text-align: start;
-    color: white;
-    padding-left: 30px;
-    margin-bottom: 30px;
-    border-bottom: #fff solid 3px;
+    text-align: center;
 }
-h4{
-    color: #fff;
-    font-size: 18px;
-}
-/*Header*/
+/*Navbar*/
 header{
     display: flex;
-    flex-direction: column;
-}
-header nav{
-    background-color: #cab2cd;
-    height: auto;
-    width: auto;
-    border-radius:50px;
-    align-self: center;
-    margin: 10px 0px;
-}
-.header-nav ul{
-    display: flex;
-    flex-direction: row;
+    width: 100%;
     justify-content: center;
 }
-.header-nav ul li{
-    margin: 10px 8px;
+header ul{
+    list-style: none;
 }
-.header-nav a{
+header a{
+    color: white;
     text-decoration: none;
-    font-size: 18px;
-    text-transform: capitalize;
-    color: black;
-    transition: all 0.4s ease;
+    padding-left: 10px;
+    font-size: 32px;
+    transition: all ease 1s;
 }
-.header-nav a:hover{
-    color: white;
-}
-.header-hero{
-    display: flex;
-    justify-content: center;
-}
-.header-hero div{
-    display: flex;
-    flex-direction:column;
-    align-items: center;
-    width: 80%;
-    background-color: #8c61b8;
-    border-top-left-radius: 50px;
-    border-top-right-radius: 50px;
-}
-.header-presentacion{
-    font-size: 28px;
+header a:hover{
+    color: rgb(20, 184, 166);
 }
 
-.header-hero .header-descripcion{
-    display: flex;
-    flex-direction: column;
-}
-.header-hero .header-descripcion ul{
-    display: flex;
-    flex-direction: row;
-}
-.header-hero i{
-    color: white;
-    font-size: 26px;
-    text-align: center;
-    width: 40px;
-    height: 40px;
-    line-height: 40px;
-    border-radius: 50%;
-    background-color: #8c61b8;
-    transition: all 0.5s ease;
-}
-.header-hero i:hover{
-    color: #8c61b8;
-    background-color: white;
-}
 /*Main*/
-main{
+.inicio{
+    display: flex;
+    width: 98%;
+    height:auto;
+
+}
+.inicio-presentacion{
+    display: flex;
+    flex-direction:row-reverse;
+    height: auto;
+    width: 100%;
+    justify-content: start;
+}
+.inicio-presentacion img{
+    width: auto;
+    height: auto;
+    margin: auto;
+}
+.inicio-descripcion{
     display: flex;
     flex-direction: column;
+    align-items: center;
+    margin: auto;
+    width: 70%;
 }
-main .main-proyectos{
-    width: 80%;
-    align-self: center;
-    background-color: #8c61b8;
-}
-main .main-proyectos .proyectos{
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    background-color: #8c61b8;
-}
-main .main-proyectos .proyectos .proyectos-proyecto{
-    padding: 12px;
-    justify-content: end;
-    border: solid #cab2cd 3px;
-    border-radius: 10px;
-    width: 90%;
-    margin: 20px 0px;
-}
-
-main .main-proyectos .proyectos .proyectos-proyecto p{
-    width: 80%;
-}
-main .main-tecnologias{
-    display: grid;
-    background-color: #8c61b8;
-    width: 80%;
-    align-self: center;
-}
-main .main-tecnologias ul {
+.inicio .iconos{
     display: flex;
     flex-direction: row;
-    justify-content:space-evenly;
+    flex-wrap: wrap;
+}
+.inicio .iconos i{
+    padding: 6px 6px;
     color: white;
-    margin-bottom: 20px;
+
 }
-main .main-tecnologias ul li i{
-    font-size: 80px;
+.inicio .iconos i:hover{
+    color: #37daa3;
 }
-main .tecnologias p{
+/*Sobre mi*/
+
+
+
+
+/*Habilidades*/
+.habilidades{
+    width: 90%;
+    height: auto;
+
+}
+.habilidades div{
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+    height: auto;
+}
+.habilidades div i{
+    width: 100%;
+    height: auto;
+    color: white;
+    transition: all ease 1s;
+    background-color: #1eb889;
+}
+.habilidades div i:hover{
+    color: red;
+    border: #1eb889;
+    border-radius: 5px;
+}
+
+
+
+
+
+
+
+
+/*Proyectos*/
+#proyectos h2{
     text-align: center;
 }
-/*Footer*/
+.proyectos{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 90%;
+    height: auto;
+    margin: auto;
+}
+.proyecto{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color:#37daa3;
+    margin: auto;
+    width:30%;
+    height: 300px;
+    border-radius: 30px;
+}
+.proyecto-botones{
+    display: flex;
+    flex-direction: row;
+    color: white;
+}
+.proyecto-botones .boton-demo{
+    display: block;
+
+}
+.proyecto-botones .boton-repo{
+    display: block;
+    background-color: #293d37;
+    border-radius: 30%;
+    color: white;
+    text-decoration: none;
+    transition: all ease 1s;
+}
+.boton-repo:hover{
+    color: #1eb889;
+}
+.boton-demo:hover{
+    color: green;
+}
+/*Contacto*/
+#contacto{
+    background-color:rgb(96, 165, 250);
+}
+.formulario{
+    display: flex;
+    flex-direction: column;
+    width:100%;
+    height: 300px;
+}
+
+.formulario input{
+    width: 50%;
+}
+.formulario button{
+    color: rgb(55, 65, 81);
+    font-size: 20px;
+    width: 50%;
+    height: 20%;
+}
+.formulario button:hover{
+    color: rgb(96, 165, 250);
+}
+
 footer{
-    display: flex;
-    flex-direction: column;
-}
-footer .sobre-mi{
-    width: 80%;
-    align-self: center;
-    background-color: #8c61b8;
-    border-bottom-left-radius: 50px;
-    border-bottom-right-radius: 50px;
-    margin-bottom: 50px;
-    display: flex;
-    flex-direction: column;
-}
-footer .sobre-mi-descripcion{
-    display: flex;
-    justify-content:center;
-}
-footer .sobre-mi p{
-    text-align: center;
-    width: 60%;
-    padding-bottom: 30px;
+    background-color: rgb(55, 65, 81)
 }
