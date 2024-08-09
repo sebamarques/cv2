@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/7dd75d41c9.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 <body>
     <header>
@@ -43,72 +44,69 @@
             </div>
         </section>
         <section id="sobre-mi">
+            <h2 data-aos="fade-down">Sobre mi</h2>
                 <div class="sobre-mi">
-                    <h2>Sobre mi</h2>
-                    <div class="sobre-mi-descripcion">
+                    <div data-aos="zoom-out-right" class="sobre-mi-descripcion">
                         <p>Me considero alguein asdkdkaskadskoasdasdlkjadfljkrejirqw3jioroirhaeouifahe
                             faohiraehiohrqejklerhejkhrasd
                             afhejkrdhjaekjghrq3uiryheguiagfsbhjkae
                             asbnafadhjknhgfdbhjar
                             sexo
                         </p>
-                        <img src="./img/hero.png">
                     </div>
+                    <img data-aos="zoom-out-left" src="./img/hero.png">
                 </div>
         </section>
         <section id="habilidades">
-            <h2>Habilidades</h2>
+            <h2 data-aos="fade-down">Habilidades</h2>
             <div class="habilidades">
-                <div>
-                    <i class="fa-brands fa-react fa-6x"></i>
-                    <i class="fa-brands fa-html5 fa-6x"></i>
-                    <i class="fa-brands fa-css3-alt fa-6x"></i>
-                    <i class="fa-brands fa-js fa-6x"></i>
-                    <i class="fa-brands fa-git fa-6x"></i>
-                    <i class="fa-brands fa-raspberry-pi fa-6x"></i>
+                <div class="iconos">
+                    <i data-aos="flip-left" class="fa-brands fa-react fa-6x"></i>
+                    <i data-aos="flip-down" class="fa-brands fa-html5 fa-6x"></i>
+                    <i data-aos="flip-right" class="fa-brands fa-css3-alt fa-6x"></i>
+                    <i data-aos="flip-left" class="fa-brands fa-js fa-6x"></i>
+                    <i data-aos="flip-up" class="fa-brands fa-git fa-6x"></i>
+                    <i data-aos="flip-right" class="fa-brands fa-raspberry-pi fa-6x"></i>
                 </div>
             </div>
         </section>
         <section id="proyectos">
-            <h2>Proyectos</h2>
+            <h2 data-aos="fade-down">Proyectos</h2>
             <div class="proyectos">
-                <div class="proyecto">
+                <div data-aos="flip-right" class="proyecto">
                     <img src="" alt="Proyecto">
                     <div class="proyecto-informacion">
                         <h3>Restaurante</h3>
                         <p>Pagina web de restaurante generico, con menu web, o pedidos a domicilio</p>
                         <div class="proyecto-botones">
                             <a href="https://sebamarques.github.io/reiki" class="boton-demo">Demo</a>
-                            <a href="https://sebamarques.github.io/reiki" class="boton-repo">Repo</a>
                         </div>
                     </div>
                 </div>
-                <div class="proyecto">
+                <div data-aos="flip-up" class="proyecto">
                     <img src="" alt="Proyecto">
-                    <div class="proyecto-informacion">
+                    <div  class="proyecto-informacion">
                         <h3>App gimnasio</h3>
                         <p>Aplicacion que ayuda a clientes/entrenadores de gimnasios para un seguimiento de sus avances</p>
                         <div class="proyecto-botones">
-                            <a href="https://sebamarques.github.io/reiki"class="boton-demo">Demo</a>
-                            <a href="https://sebamarques.github.io/reiki" class="boton-repo">Repo</a>
+                            <a href="https://sebamarques.github.io/reiki" class="boton-demo">Demo</a>
                         </div>
                     </div>
                 </div>
-                <div class="proyecto">
+                <div data-aos="flip-left" class="proyecto">
                     <img src="" alt="Proyecto">
                     <div class="proyecto-informacion">
                         <h3>ReciclaYa!</h3>
                         <p>Aplicacion web para ayudar al reciclaje de la ciudad, la cual cuenta con un sistema de puntos para canjear</p>
                         <div class="proyecto-botones">
                             <a href="https://sebamarques.github.io/reiki" class="boton-demo">Demo</a>
-                            <a href="https://sebamarques.github.io/reiki" class="boton-repo">Repo</a>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
         <section id="contacto">
-            <h2>Contacto</h2>
+            <h2 data-aos="fade-down">Contacto</h2>
             <form class="formulario">
                 <label>Nombre</label>
                 <input>
@@ -125,8 +123,12 @@
         </section>
     </main>
     <footer>
-        Es el fin de la pagina web
+        <p>Llegamos al final de la pagina</p>
     </footer>
     <script src="script.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
 </body>
 </html>
