@@ -5,7 +5,6 @@ document.addEventListener("scroll", () => {
     } else {
         header.classList.remove("scrolled");
     }
-
     const navbarLinks = document.querySelectorAll('header nav a');
     const sections = document.querySelectorAll('section');
     let scrollPos = window.scrollY + window.innerHeight / 2;
