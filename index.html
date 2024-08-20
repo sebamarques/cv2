@@ -8,6 +8,28 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/7dd75d41c9.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            emailjs.init({
+              publicKey: "ody9f9tcpqhjsUde3",
+            });
+        })();
+    </script>
+    <script type="text/javascript">
+        window.onload = function() {
+            document.getElementById('contact-form').addEventListener('submit', function(event) {
+                event.preventDefault();
+                emailjs.sendForm('service_ygncpch', 'template_ayzf4fi', this)
+                    .then(() => {
+                        alert("El formulario funciono correctamente, en la brevedad me pondre en contacto contigo")
+                        this.reset()
+                    }, (error) => {
+                        console.log('Error...', error);
+                    });
+            });
+        }
+    </script>
 </head>
 <body>
     <header>
@@ -30,13 +52,11 @@
                     <div class="inicio-descripcion">
                         <h1>Sebastián Márquez</h1>
                         <h3>Desarollador de Software</h3>
-                        <p> Estudiante de la carrera de ingenieria en Informatica</p>
+                        <p> Estudiante de ingenieria en Informatica</p>
                         <div class="iconos">
-                            <a href="https://instagram.com/_seba.marquez"><i class="fa-brands fa-instagram fa-2x"></i></a>
-                            <a href="https://twitter.com"><i class="fa-brands fa-x-twitter fa-2x" ></i></a>
-                            <a href="https://github.com"><i class="fa-brands fa-github fa-2x"></i></a>
-                            <a href="https://linkedin.com"><i class="fa-brands fa-linkedin-in fa-2x"></i></a>
-                            <a href="https://upwork.com"><i class="fa-brands fa-upwork fa-2x"></i></a>
+                            <a href="https://github.com/sebamarques"><i class="fa-brands fa-github fa-2x"></i></a>
+                            <a href="https://www.linkedin.com/in/sebasti%C3%A1n-m%C3%A1rquez-a130a0294/"><i class="fa-brands fa-linkedin-in fa-2x"></i></a>
+                            <a href="https://www.upwork.com/freelancers/~0124201c3f24a40cb5"><i class="fa-brands fa-upwork fa-2x"></i></a>
                         </div>
                     </div>
                 </div>
@@ -45,13 +65,13 @@
         <section id="habilidades">
             <h2 data-aos="fade-down">Habilidades</h2>
             <div class="habilidades">
-                <div class="iconos" data-aos="flip-left">
-                    <i class="fa-brands fa-react fa-6x"></i>
-                    <i class="fa-brands fa-html5 fa-6x"></i>
-                    <i class="fa-brands fa-css3-alt fa-6x"></i>
-                    <i class="fa-brands fa-js fa-6x"></i>
-                    <i class="fa-brands fa-git fa-6x"></i>
-                    <i class="fa-brands fa-raspberry-pi fa-6x"></i>
+                <div class="iconos">
+                    <i data-aos="flip-left" class="fa-brands fa-react fa-6x"></i>
+                    <i data-aos="flip-down" class="fa-brands fa-html5 fa-6x"></i>
+                    <i data-aos="flip-right" class="fa-brands fa-css3-alt fa-6x"></i>
+                    <i data-aos="flip-left" class="fa-brands fa-js fa-6x"></i>
+                    <i data-aos="flip-up" class="fa-brands fa-git fa-6x"></i>
+                    <i data-aos="flip-right" class="fa-brands fa-raspberry-pi fa-6x"></i>
                 </div>
             </div>
         </section>
@@ -61,10 +81,12 @@
                 <div data-aos="fade-up" class="proyecto">
                     <img src="img/fondo.jpg" alt="Proyecto">
                     <div class="proyecto-informacion">
-                        <h3>Restaurante</h3>
-                        <p>Sitio web de restaurante Little-Lemon</p>
+                        <h3>Little Lemon</h3>
+                        <p>Sitio web del Restaurante Little-Lemon, en donde se nos muestra la variedad de sus platillos
+                            ademas de su servicio de Reservas y Delivery.
+                        </p>
                         <div class="proyecto-botones">
-                            <a href="https://sebamarques.github.io/reiki" class="boton-demo">Demo</a>
+                            <a href="https://sebamarques.github.io/Restaurante" class="boton-demo"><i class="fa-solid fa-eye"></i>Demo</a>
                         </div>
                     </div>
                 </div>
@@ -74,7 +96,7 @@
                         <h3>App gimnasio</h3>
                         <p>Aplicacion que ayuda a usuarios/entrenadores de gimnasios para un seguimiento de sus avances</p>
                         <div class="proyecto-botones">
-                            <a href="https://sebamarques.github.io/reiki" class="boton-demo">Demo</a>
+                            <a href="https://sebamarques.github.io/reiki" class="boton-demo"><i class="fa-solid fa-eye"></i>Demo</a>
                         </div>
                     </div>
                 </div>
@@ -82,9 +104,11 @@
                     <img src="img/fondo.jpg" alt="Proyecto">
                     <div class="proyecto-informacion">
                         <h3>ReciclaYa!</h3>
-                        <p>Aplicacion web para promover el reciclaje entre la población</p>
+                        <p> Aplicacion web para promover el reciclaje entre la población, la cual otrorga puntos por depositar desechos reciclables
+                            en contenedores inteligentes, los cuales podemos gastar en la App.
+                        </p>
                         <div class="proyecto-botones">
-                            <a href="https://sebamarques.github.io/reiki" class="boton-demo">Demo</a>
+                            <a href="https://sebamarques.github.io/ReciclaYa" class="boton-demo"><i class="fa-solid fa-eye"></i>Demo</a>
                         </div>
                     </div>
                 </div>
@@ -92,13 +116,11 @@
         </section>
         <section id="contacto">
             <h2 data-aos="fade-down">Contacto</h2>
-            <form data-aos="fade-left" class="formulario">
-                <p>Para consultas deberan de completar el formulario</p>
-                <input type="text" required placeholder="Nombre">
-                <input type="text" required placeholder="Apellido">
-                <input type="email" required placeholder="Email">
-                <input type="text" required minlength="2" placeholder="Asunto">
-                <input type="textarea" placeholder="Consulta">
+            <form data-aos="fade-left" class="formulario" id="contact-form">
+                <p>Para ponerme en contacto cuanto antes deberan de completar el formulario</p>
+                <input type="text" name="nombre_usuario"  placeholder="Nombre" required >
+                <input type="email" name="email_usuario" placeholder="Email" required >
+                <textarea name="mensaje_usuario" placeholder="Consulta" required></textarea>
                 <button>Enviar</button>
             </form>
         </section>
@@ -108,11 +130,9 @@
                 <ul>
                     <li>
                         <div class="iconos">
-                            <a href="https://instagram.com/_seba.marquez"><i class="fa-brands fa-instagram"></i></a>
-                            <a href="https://twitter.com"><i class="fa-brands fa-x-twitter"></i></a>
-                            <a href="https://github.com"><i class="fa-brands fa-github"></i></a>
-                            <a href="https://linkedin.com"><i class="fa-brands fa-linkedin-in"></i></a>
-                            <a href="https://upwork.com"><i class="fa-brands fa-upwork"></i></a>
+                            <a href="https://github.com/sebamarques"><i class="fa-brands fa-github"></i></a>
+                            <a href="https://www.linkedin.com/in/sebasti%C3%A1n-m%C3%A1rquez-a130a0294/"><i class="fa-brands fa-linkedin-in"></i></a>
+                            <a href="https://www.upwork.com/freelancers/~0124201c3f24a40cb5"><i class="fa-brands fa-upwork"></i></a>
                         </div>
                     </li>
                 </ul>

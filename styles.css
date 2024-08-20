@@ -3,7 +3,6 @@
     scroll-behavior: smooth;
     scrollbar-color: #37daa3 black;
     scrollbar-width: thin;
-    
 }
 body{
     background-color: #292929;
@@ -21,6 +20,7 @@ h3{
 }
 ul{
     list-style: none;
+    margin-right: 30px;
 }
 #sobre-mi,
 #habilidades,
@@ -32,7 +32,7 @@ ul{
 header{
     display: flex;
     width: 100%;
-    height: 4em;
+    height: 4rem;
     justify-content: end;
     position: sticky;
     top: 0;
@@ -51,19 +51,19 @@ header a{
     color: white;
     text-decoration: none;
     padding-left: 10px;
-    font-size: 24px;
+    font-size: 1.5rem;
     transition: all ease 0.5s;
 }
 header a:hover{
     color: rgb(20, 184, 166);
 }
-header nav a.active {
+header nav a.activo {
     color: rgb(20, 184, 166);
 }
 /*Main*/
 #inicio{
     width: 100%;
-    height: 90vh;
+    min-height: 70vh;
     background-color: #141414;
 }
 .inicio{
@@ -98,6 +98,7 @@ header nav a.active {
 .inicio .iconos i{
     padding: 6px;
     color: white;
+    transition: all ease 0.2s;
 }
 .inicio .iconos i:hover{
     color: #37daa3;
@@ -106,7 +107,7 @@ header nav a.active {
 /* Habilidades */
 #habilidades {
     width: 100%;
-    height: 90vh;
+    padding: 4rem 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -143,7 +144,7 @@ header nav a.active {
 /*Proyectos*/
 #proyectos{
     width: 100%;
-    height: 90vh;
+    padding: 4rem 0;
     background-color: #141414;
 }
 .proyectos{
@@ -172,7 +173,7 @@ header nav a.active {
     border-top-right-radius: 20px;
 }
 .proyecto-informacion{
-    width: 100%;
+    width: 90%;
     padding: 10px 15px;
     display: flex;
     flex-direction: column;
@@ -195,7 +196,7 @@ header nav a.active {
     display: flex;
     justify-content: center;
 }
-.proyecto-botones .boton-demo{
+.boton-demo{
     width: 100px;
     text-align: center;
     background-color: #000000;
@@ -214,10 +215,13 @@ header nav a.active {
     background-color: #0a0a0a;
     color: #37daa3;
 }
+.boton-demo i{
+    padding: 5px;
+}
 /*Contacto*/
 #contacto{
     width: 100%;
-    height: 85vh;
+    padding: 4rem 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -225,13 +229,13 @@ header nav a.active {
 .formulario{
     display: flex;
     flex-direction: column;
-    width:50%;
-    height: 80%;
+    width: 50%;
+    min-height: 60vh;
     align-items: center;
     justify-content: center;
     border: solid 1px #fff;
     border-radius: 10px;
-    background-color:rgb(20, 184, 166);
+    background-color: rgb(20, 184, 166);
 }
 .formulario input {
     width: 80%;
@@ -256,6 +260,27 @@ header nav a.active {
     color: #555;
     opacity: 0.7;
 }
+.formulario textarea{
+    width: 80%;
+    height: 200px;
+    margin: 10px 0;
+    padding: 0 10px;
+    border-radius: 10px;
+    border: 2px solid #17b4a2;
+    background-color: #e0f2f1;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    color: #000;
+    transition: border 0.3s ease;
+}
+.formulario textarea:focus {
+    border-color: #14b8a6;
+    outline: none;
+}
+.formulario textarea::placeholder {
+    color: #555;
+    opacity: 0.7;
+}
 .formulario button {
     width: 150px;
     height: 40px;
@@ -266,10 +291,11 @@ header nav a.active {
     border: solid 1px white;
     border-radius: 5px;
     transition: all 0.3s ease;
+    margin: 4px;
 }
 .formulario button:hover {
     cursor: pointer;
-    transform: translateY(-2px); /* Eleva el botón ligeramente */
+    transform: translateY(-2px);
     background-color: #1cc7b3;
     box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.2);
 }
@@ -285,3 +311,83 @@ footer i{
     padding: auto;
     margin: 0px 5px;
 }
+/*Media queries*/
+@media (max-width: 576px) {
+    .inicio-presentacion {
+        flex-direction: column;
+    }
+    .inicio-presentacion img{
+        width: 200px;
+        height: 200px;
+    }
+    .proyectos {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .proyecto {
+        width: 70%;
+        margin-bottom: 20px;
+    }
+    .habilidades .iconos {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px 15px;
+        width: 80%;
+    }
+    .formulario {
+        width: 90%;
+    }
+}
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .inicio-presentacion {
+        flex-direction: column;
+    }
+    .inicio-presentacion img{
+        width: 300px;
+        height: 300px;
+    }
+    .proyectos {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .proyecto {
+        width: 90%;
+        margin-bottom: 20px;
+        height: auto;
+    }
+    .habilidades .iconos {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px 15px;
+        width: 80%;
+    }
+    .formulario {
+        width: 90%;
+        height: auto;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .inicio-presentacion {
+        flex-direction: column;
+    }
+    .proyectos {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .proyecto {
+        width: 90%;
+        margin: 10px 0;
+    }
+    .habilidades .iconos {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px 15px;
+        width: 80%;
+    }
+    .formulario {
+        width: 70%;
+        height: auto;
+    }
+}
+

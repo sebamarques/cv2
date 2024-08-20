@@ -11,8 +11,8 @@ document.addEventListener("scroll", () => {
 
     sections.forEach((section, index) => {
         if (scrollPos >= section.offsetTop && scrollPos < section.offsetTop + section.offsetHeight) {
-            navbarLinks.forEach(link => link.classList.remove('active'));
-            navbarLinks[index].classList.add('active');
+            navbarLinks.forEach(link => link.classList.remove('activo'));
+            navbarLinks[index].classList.add('activo');
         }
     });
 });
