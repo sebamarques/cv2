@@ -28,6 +28,18 @@ ul{
 #contacto{
     padding-top: 5em;
 }
+.menu-toggle {
+    display: none;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+}
+.nav-links {
+    display: flex;
+    list-style: none;
+}
 /*Navbar*/
 header{
     display: flex;
@@ -312,62 +324,104 @@ footer i{
     margin: 0px 5px;
 }
 /*Media queries*/
+/*Media queries*/
 @media (max-width: 576px) {
+    body, html {
+        overflow-x: hidden;
+    }
     .inicio-presentacion {
         flex-direction: column;
     }
-    .inicio-presentacion img{
-        width: 200px;
-        height: 200px;
+    .inicio-presentacion img {
+        max-width: 60%;
+        height: auto;
     }
     .proyectos {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        width: 100%;
     }
     .proyecto {
-        width: 70%;
+        width: 80%;
         margin-bottom: 20px;
     }
     .habilidades .iconos {
         grid-template-columns: repeat(2, 1fr);
         gap: 30px 15px;
-        width: 80%;
+        width: 100%;
     }
     .formulario {
-        width: 90%;
+        width: 95%;
+    }
+    .formulario p{
+        padding-left: 5px;
     }
 }
+
 @media (min-width: 576px) and (max-width: 767.98px) {
+    body, html {
+        overflow-x: hidden;
+    }
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        background-color: #333;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        height: auto;
+    }
+    .nav-links li {
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+        border-bottom: 1px solid #fff;
+    }
+    .menu-toggle {
+        display: block;
+        position: absolute;
+        top: 15px;
+        right: 15px;
+    }
+    .nav-links.show {
+        display: flex;
+    }
     .inicio-presentacion {
         flex-direction: column;
     }
-    .inicio-presentacion img{
-        width: 300px;
-        height: 300px;
+    .inicio-presentacion img {
+        max-width: 85%;
+        height: auto;
     }
     .proyectos {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        width: 100%;
     }
     .proyecto {
-        width: 90%;
+        width: 70%;
         margin-bottom: 20px;
         height: auto;
     }
     .habilidades .iconos {
         grid-template-columns: repeat(2, 1fr);
         gap: 30px 15px;
-        width: 80%;
+        width: 100%;
     }
     .formulario {
-        width: 90%;
+        width: 85%;
         height: auto;
     }
 }
 
 @media (min-width: 768px) and (max-width: 991.98px) {
+    body, html {
+        overflow-x: hidden;
+    }
     .inicio-presentacion {
         flex-direction: column;
     }
@@ -375,19 +429,19 @@ footer i{
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        width: 100%;
     }
     .proyecto {
-        width: 90%;
+        width: 70%;
         margin: 10px 0;
     }
     .habilidades .iconos {
         grid-template-columns: repeat(2, 1fr);
         gap: 30px 15px;
-        width: 80%;
+        width: 100%;
     }
     .formulario {
-        width: 70%;
+        width: 80%;
         height: auto;
     }
 }
-
