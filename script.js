@@ -11,17 +11,19 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         });
     };
-
+    document.querySelectorAll('.nav-links li a').forEach(link => {
+        link.addEventListener('click', () => {
+            document.querySelector('.nav-links').classList.remove('show');
+        });
+    });
     document.querySelector('.menu-toggle').addEventListener('click', () => {
         document.querySelector('.nav-links').classList.toggle('show');
     });
-
     updateActiveSection();
-
     document.addEventListener("scroll", () => {
         updateActiveSection();
-
         let header = document.querySelector("header");
+
         if (window.scrollY > 0) {
             header.classList.add("scrolled");
         } else {
