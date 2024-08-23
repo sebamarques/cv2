@@ -323,15 +323,142 @@ footer i{
     padding: auto;
     margin: 0px 5px;
 }
-/*Media queries*/
-/*Media queries*/
-@media (max-width: 576px) {
-    body, html {
-        overflow-x: hidden;
-    }
+@media (max-width: 575px) {
     .menu-toggle {
         display: block;
+        position: sticky;
+        top: 10px;
+        right: 10px;
+        z-index: 2;
+    }
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: rgba(0, 0, 0, 0.9);
         position: fixed;
+        top: 0;
+        left: 0;
+        width: 89%;
+        height: 100vh;
+        transition: all 0.3s ease-in-out;
+        z-index: 1;
+    }
+    .nav-links.show {
+        display: flex;
+    }
+    .nav-links li {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        margin: 15px 5px;
+        font-size: 22px;
+    }
+    .inicio-presentacion {
+        flex-direction: column;
+    }
+    .inicio-presentacion img {
+        max-width: 55%;
+        height: auto;
+    }
+    .proyectos {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 85%;
+    }
+    .proyecto {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+    .habilidades .iconos {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px 5px;
+        width: 65%;
+    }
+    .formulario {
+        width: 95%;
+    }
+    .formulario p {
+        width: 75%;
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .menu-toggle {
+        display: block;
+        position: sticky;
+        top: 15px;
+        right: 15px;
+        z-index: 2;
+    }
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: rgba(0, 0, 0, 0.9);
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 90%;
+        height: 100vh;
+        transition: all 0.3s ease-in-out;
+        z-index: 1;
+    }
+    .nav-links.show {
+        display: flex;
+    }
+    .nav-links li {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        margin: 20px 5px;
+        font-size: 24px;
+    }
+    .inicio-presentacion {
+        flex-direction: column;
+    }
+    .inicio-descripcion {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .inicio-presentacion img {
+        max-width: 60%;
+        height: auto;
+    }
+    .proyectos {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 90%;
+    }
+    .proyecto {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .habilidades .iconos {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px 15px;
+        width: 70%;
+    }
+    .formulario {
+        width: 90%;
+    }
+    .formulario p {
+        width: 80%;
+        font-size: 16px;
+    }
+}
+@media (min-width: 768px) and (max-width: 899.98px) {
+    .menu-toggle {
+        display: block;
+        position: sticky;
         top: 15px;
         right: 15px;
         z-index: 1;
@@ -345,7 +472,7 @@ footer i{
         position: fixed;
         top: 0;
         left: 0;
-        width: 100%;
+        width: 90%;
         height: 100vh;
         transition: all 0.3s ease-in-out;
         z-index: 1;
@@ -361,131 +488,29 @@ footer i{
         margin: 20px 5px;
         font-size: 24px;
     }
-    header {
-        justify-content: space-between;
-    }
     .inicio-presentacion {
         flex-direction: column;
     }
     .inicio-presentacion img {
-        max-width: 60%;
+        max-width: 80%;
         height: auto;
     }
     .proyectos {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        width: 100%;
+        width: 90%;
     }
     .proyecto {
-        width: 80%;
+        width: 100%;
         margin-bottom: 20px;
     }
     .habilidades .iconos {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 30px 15px;
-        width: 100%;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px 10px;
+        width: 75%;
     }
     .formulario {
-        width: 95%;
-    }
-    .formulario p{
-        padding-left: 5px;
-    }
-}
-
-@media (min-width: 576px) and (max-width: 767.98px) {
-    body, html {
-        overflow-x: hidden;
-    }
-    .menu-toggle {
-        display: block;
-        position: absolute;
-        top: 15px;
-        right: 15px;
-        z-index: 10; /* Asegura que el ícono esté siempre visible */
-    }
-
-    .nav-links {
-        display: none;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        background-color: rgba(0, 0, 0, 0.9); /* Fondo oscuro y semi-transparente */
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100vh;
-        transition: all 0.3s ease-in-out;
-        z-index: 9; /* Asegura que el menú cubra toda la pantalla */
-    }
-    .nav-links.show {
-        display: flex;
-    }
-    .nav-links li {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        text-align: center;
-        margin: 20px 5px;
-        font-size: 24px;
-    }
-    header {
-        justify-content: space-between;
-    }
-    .inicio-presentacion {
-        flex-direction: column;
-    }
-    .inicio-presentacion img {
-        max-width: 85%;
-        height: auto;
-    }
-    .proyectos {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-    }
-    .proyecto {
-        width: 70%;
-        margin-bottom: 20px;
-        height: auto;
-    }
-    .habilidades .iconos {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 30px 15px;
-        width: 100%;
-    }
-    .formulario {
-        width: 85%;
-        height: auto;
-    }
-}
-@media (min-width: 768px) and (max-width: 991.98px) {
-    body, html {
-        overflow-x: hidden;
-    }
-    .inicio-presentacion {
-        flex-direction: column;
-    }
-    .proyectos {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-    }
-    .proyecto {
-        width: 70%;
-        margin: 10px 0;
-    }
-    .habilidades .iconos {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 30px 15px;
-        width: 100%;
-    }
-    .formulario {
-        width: 80%;
-        height: auto;
+        width: 98%;
     }
 }
