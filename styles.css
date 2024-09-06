@@ -178,7 +178,7 @@ header nav a.activo {
     box-sizing: border-box;
 }
 .proyecto img{
-    height: 200px;
+    height: auto;
     width: 100%;
     object-fit: cover;
     border-top-left-radius: 20px;
@@ -341,7 +341,7 @@ footer i{
         top: 0;
         left: 0;
         width: 89%;
-        height: 100vh;
+        height: 100vh ;
         transition: all 0.3s ease-in-out;
         z-index: 1;
     }
@@ -363,6 +363,11 @@ footer i{
         max-width: 55%;
         height: auto;
     }
+    .habilidades .iconos {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px 5px;
+        width: 65%;
+    }
     .proyectos {
         flex-direction: column;
         justify-content: center;
@@ -372,11 +377,6 @@ footer i{
     .proyecto {
         width: 100%;
         margin-bottom: 15px;
-    }
-    .habilidades .iconos {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 15px 5px;
-        width: 65%;
     }
     .formulario {
         width: 95%;
@@ -432,6 +432,11 @@ footer i{
         max-width: 60%;
         height: auto;
     }
+    .habilidades .iconos {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px 15px;
+        width: 70%;
+    }
     .proyectos {
         flex-direction: column;
         justify-content: center;
@@ -441,11 +446,6 @@ footer i{
     .proyecto {
         width: 100%;
         margin-bottom: 20px;
-    }
-    .habilidades .iconos {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 20px 15px;
-        width: 70%;
     }
     .formulario {
         width: 90%;
